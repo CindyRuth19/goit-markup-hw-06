@@ -550,34 +550,25 @@
               </li>
             </ul>
           </div>
-          <div class="subscription">
-            <b class="footer-heading">Subscription</b>
-            <form class="information">
-              <label class="email-label">
+          <div class="footer-subscription">
+            <b class="footer-heading">Subscribe</b>
+            <form class="footer-information">
+              <label class="footer-email-label">
                 <input
-                  class="email-input"
-                  type="text"
+                  class="footer-email-input"
+                  type="email"
                   name="email"
                   placeholder="E-mail"
                 />
               </label>
 
-              <button type="submit" class="button subscribe">
+              <button type="submit" class="button button-subscribe">
                 Subscribe
-                <svg
-                  class="button-icon"
-                  xmlns="http://www.w3.org/2000/svg"
-                  width="24"
-                  height="24"
-                  viewBox="0 0 24 24"
-                  fill="none"
-                >
-                  <path
-                    d="M24 2L0 13.25L7.66994 15.6172L19.5 6.375L10.5017 16.4913L10.509 16.4936L10.5 16.4913V22L14.8013 17.8183L20.2501 19.5L24 2Z"
-                    fill="white"
-                  />
+                <svg class="button-icon" width="24" height="20">
+                  <use href="./images/icons.svg#icon-submit"></use>
                 </svg>
               </button>
+              
             </form>
           </div>
         </div>
@@ -590,8 +581,61 @@
             <use href="./images/icons.svg#icon-close"></use>
           </svg>
         </button>
-      </div>
-    </div>
+        <h2 class="modal-title">Leave your contacts and we will call you back</h2>
+          <form name="modal-form">
+            <label class="form-label">
+              <span class="form-name">Name</span>
+              
+              <input class="form-input" type="text" name="user-name" autofocus />
+              <svg class="form-icon" width="18" height="18">
+                <use href="./images/icons.svg#icon-name"></use>
+              </svg>
+            </label>
+            <label class="form-label">
+              <span class="form-name">Phone</span>
+              
+              <input class="form-input" type="tel" name="user-phone" />
+              <svg class="form-icon" width="18" height="24">
+                <use href="./images/icons.svg#icon-phone"></use>
+              </svg>
+            </label>
+
+            <label class="form-label">
+              <span class="form-name">E-mail</span>
+              
+              <input class="form-input" type="text" name="user-email" />
+              <svg class="form-icon" width="18" height="24">
+                <use href="./images/icons.svg#icon-email"></use>
+              </svg>
+            </label>
+
+           <label class="form-label">
+            <span class="form-name">Comments</span>
+            <textarea
+              class="form-textarea"
+              name="user-feedback"
+              rows="8"
+              placeholder="Text input"
+            ></textarea>
+          </label>
+             <label class="form-agreement">
+            <input
+              class="form-checkbox visually-hidden "
+              type="checkbox"
+              name="user-terms"
+              checked
+            />
+            <svg class="form-checkbox-icon" width="16" height="16">
+              <use href="./images/icons.svg#icon-checkbox"></use>
+            </svg>
+            <span
+              >I accept the terms and conditions of the
+              <a class="form-terms" href="">Privacy Policy</a></span
+            >
+          </label>
+            <button class="button button-send" type="button ">Send</button>
+          </form>
+       
     <!-- MODAL SCRIPT -->
     <script src="./js/modal.js"></script>
   </body>
