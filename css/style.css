@@ -171,10 +171,26 @@ body {
 
 .current {
   position: relative;
-  color: var(--oceancolor);
+  color: var(--iriscolor);
 }
 
 .current::after {
+  content: "";
+  position: absolute;
+  left: 0;
+  bottom: -1px;
+  width: 100%;
+  height: 4px;
+  border-radius: 2px;
+  background-color: var(--oceancolor);
+}
+
+.page {
+  position: relative;
+  color: var(--iriscolor);
+}
+
+.page:hover::after {
   content: "";
   position: absolute;
   left: 0;
@@ -637,12 +653,12 @@ body {
 }
 
 .modal {
-  padding: 40px;
+  padding: 72px 24px 24px 24px;
   position: absolute;
   top: 50%;
   left: 50%;
-  min-width: 408px;
-  min-height: 584px;
+  width: 408px;
+  height: 584px;
   border-radius: 4px;
   background-color: var(--whitecolor);
 
@@ -656,16 +672,16 @@ body {
 
 .modal-close {
   position: absolute;
-  top: 8px;
-  right: 8px;
+  top: 24px;
+  right: 24px;
   padding: 0;
   display: flex;
   justify-content: center;
   align-items: center;
-  width: 30px;
-  height: 30px;
+  width: 24px;
+  height: 24px;
 
-  background-color: var(--whitecolor);
+  background-color: var(--cornflower);
   color: var(--blackcolor);
   border: 1px solid rgba(0, 0, 0, 0.1);
   border-radius: 15px;
@@ -690,6 +706,9 @@ body {
   opacity: 0;
   pointer-events: none;
 }
+.footer-information {
+  padding-top: 16px;
+}
 
 .footer-subscription {
   margin-top: 12px;
@@ -699,19 +718,15 @@ body {
 .footer-email-input {
   padding: 8px 16px;
   background-color: var(--navyblue);
+  font-size: 12px;
   width: 264px;
   height: 40px;
   border-radius: 4px;
-  margin-top: 10px;
   margin-right: 24px;
+  color: var(--whitecolor);
   border: 1px solid var(--whitecolor);
   box-shadow: 0px 4px 4px 0px rgba(0, 0, 0, 0.15);
-}
-
-.footer-email-input:hover,
-.footer-email-input:focus {
-  background-color: var(--navyblue);
-  color: var(--whitecolor);
+  outline: none;
 }
 
 .footer-email-input::placeholder {
@@ -773,6 +788,7 @@ body {
 .form-input,
 .form-textarea {
   display: block;
+  font-size: 12px;
   width: 100%;
   margin-bottom: 29px;
   padding: 11px 16px 11px 40px;
@@ -800,7 +816,7 @@ body {
 }
 
 .form-textarea::placeholder {
-  color: var(--navyblue, rgba(46, 47, 66, 0.4));
+  color: var(--navyblue-modal, rgba(46, 47, 66, 0.4));
   font-size: 12px;
 }
 
@@ -820,9 +836,10 @@ body {
 
 .form-agreement {
   display: flex;
-  justify-content: center;
   align-items: center;
-  margin-bottom: 34px;
+  font-size: 12px;
+  margin-bottom: 24px;
+  color: var(--lightslate);
 }
 
 .form-checkbox-icon {
@@ -846,6 +863,9 @@ body {
 }
 
 .button-send {
+  width: 169px;
+  height: 56px;
+  font-weight: 500;
   display: block;
   margin: auto;
   padding: 16px 32px;
